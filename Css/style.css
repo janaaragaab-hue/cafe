@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#fdf7eb;
+}
+
+.nav{
+    background-color: black;
+    width: 100%;
+    height: 55px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    position:sticky;
+    top:0;
+    z-index: 1000;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+}
+.nav a{
+    text-transform: uppercase;
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 10px 100px;
+    padding-bottom: 8px;
+    font-size: 1rem;
+    flex: 1;
+    border: 5px solid black;
+    font-family: "Inconsolata", sans-serif;
+
+}
+.nav a:hover{
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+    
+}
+.header {
+    position: relative;
+}
+.header img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    height: 470px;
+    
+}
+.header h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 90px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+.hours {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight:lighter;
+    word-spacing: 3px;
+    padding: 0 8px;
+    
+}
+.hours p {
+    margin: 0;
+    padding: 0;
+}
+
+.address {
+    position: absolute;
+    bottom: 7px;
+    right: 20px;
+    color: white;
+    font-family: "Inconsolata", sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0 8px;
+}
+.intro {
+    text-align: center;
+    margin: 50px auto;
+    width: 800px;
+  
+    
+}
+.intro h2{
+    background-color: black;
+    color:white;
+    margin-bottom: 50px;
+    letter-spacing:4px;
+    word-spacing: 3px;
+    display: inline-block;
+    padding: 3px 8px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-family: "Inconsolata", sans-serif;
+    font-size: 1.3rem;   
+}
+.intro p {
+    font-family: "Inconsolata", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 20px;
+}
+.intro pre {
+    background-color: #f1f1f1;
+    border-left: 6px solid #ccc;
+    text-align: left;
+    padding: 20px 5px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+}
+.intro img{
+    display: block;
+    margin: 20px auto;
+    object-fit: scale-down;
+    width: 100%;
+    max-width: 800px;
+}

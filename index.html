@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>The Cafe</title>
+        <link rel="stylesheet" href="Css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+        <!-- Extra styles for the Menu and Where sections (style.css is untouched) -->
+        <style>
+            html { scroll-behavior: smooth; }
+            #about, #menu, #where { scroll-margin-top: 55px; }
+
+            /* Menu */
+            .menu-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0 48px;
+                text-align: left;
+                font-family: "Inconsolata", sans-serif;
+            }
+            .menu-group { margin-bottom: 36px; }
+            .menu-group h3 {
+                margin: 0 0 14px;
+                padding-bottom: 6px;
+                border-bottom: 2px solid black;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-weight: lighter;
+                font-size: 1.1rem;
+            }
+            .menu-group ul { list-style: none; margin: 0; padding: 0; }
+            .menu-item { margin: 12px 0; font-size: 18px; line-height: 1.4; }
+            .menu-row { display: flex; align-items: baseline; gap: 8px; }
+            .menu-row .dots { flex: 1; border-bottom: 2px dotted #999; }
+            .menu-row .price { font-weight: bold; }
+            .menu-desc { display: block; font-size: 15px; font-style: italic; color: #555; }
+
+            /* Where */
+            .map {
+                display: block;
+                width: 100%;
+                height: 400px;
+                margin: 20px auto;
+                border: 6px solid black;
+                box-sizing: border-box;
+            }
+            .map-link { font-family: "Inconsolata", sans-serif; font-size: 18px; color: black; }
+
+            @media (max-width: 700px) {
+                .menu-grid { grid-template-columns: 1fr; }
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="home" class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#where">Where</a>
+        </nav>
+
+        <div class="header">
+            <img src="imgs/coffeehouse.jpg" alt="Fresh bread and pastries on a wooden counter">
+            <h1>the <br> Cafe</h1>
+            <span class="hours"><p>Open from 6am to 5pm</p></span>
+            <span class="address"><p>15 Adr street, 5015</p></span>
+        </div>
+
+        <div id="about" class="intro">
+            <h2>About the cafe</h2>
+            <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order
+                breakfast and lunch sandwiches, as well as a selection of sides and salads and
+                other good stuff.</p>
+            <pre>"Use products from nature for what it's worth - but never too early, nor
+too late." Fresh is the new sweet.
+
+Chef, Coffeeist and Owner: Liam Brown</pre>
+            <img src="imgs/coffeeshop.jpg" alt="Inside the cafe, with the coffee counter and chalkboard menus">
+        </div>
+
+        <div id="menu" class="intro">
+            <h2>Menu</h2>
+            <p>Everything is made fresh to order. All prices are in EGP.</p>
+
+            <div class="menu-grid">
+                <section class="menu-group">
+                    <h3>Coffee</h3>
+                    <ul>
+                        <li class="menu-item"><div class="menu-row"><span>Espresso</span><span class="dots"></span><span class="price">55</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Americano</span><span class="dots"></span><span class="price">65</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Cappuccino</span><span class="dots"></span><span class="price">75</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Flat White</span><span class="dots"></span><span class="price">80</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Latte</span><span class="dots"></span><span class="price">80</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Mocha</span><span class="dots"></span><span class="price">90</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Iced Latte</span><span class="dots"></span><span class="price">85</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Cold Brew</span><span class="dots"></span><span class="price">85</span></div><span class="menu-desc">Steeped for 18 hours</span></li>
+                    </ul>
+                </section>
+
+                <section class="menu-group">
+                    <h3>Other drinks</h3>
+                    <ul>
+                        <li class="menu-item"><div class="menu-row"><span>Tea</span><span class="dots"></span><span class="price">45</span></div><span class="menu-desc">Black, green or fresh mint</span></li>
+                        <li class="menu-item"><div class="menu-row"><span>Hot Chocolate</span><span class="dots"></span><span class="price">80</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Fresh Orange Juice</span><span class="dots"></span><span class="price">70</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Sparkling Water</span><span class="dots"></span><span class="price">35</span></div></li>
+                    </ul>
+                </section>
+
+                <section class="menu-group">
+                    <h3>Breakfast</h3>
+                    <ul>
+                        <li class="menu-item"><div class="menu-row"><span>Egg &amp; Cheese Sandwich</span><span class="dots"></span><span class="price">95</span></div><span class="menu-desc">Fried egg, cheddar, toasted bun</span></li>
+                        <li class="menu-item"><div class="menu-row"><span>Avocado Toast</span><span class="dots"></span><span class="price">120</span></div><span class="menu-desc">Sourdough, lemon, chili flakes</span></li>
+                        <li class="menu-item"><div class="menu-row"><span>Granola &amp; Yoghurt</span><span class="dots"></span><span class="price">95</span></div><span class="menu-desc">Seasonal fruit and honey</span></li>
+                    </ul>
+                </section>
+
+                <section class="menu-group">
+                    <h3>Lunch</h3>
+                    <ul>
+                        <li class="menu-item"><div class="menu-row"><span>Chicken Pesto Sandwich</span><span class="dots"></span><span class="price">130</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Turkey &amp; Cheddar</span><span class="dots"></span><span class="price">135</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Caprese</span><span class="dots"></span><span class="price">120</span></div><span class="menu-desc">Tomato, mozzarella, basil</span></li>
+                        <li class="menu-item"><div class="menu-row"><span>Garden Salad</span><span class="dots"></span><span class="price">100</span></div></li>
+                    </ul>
+                </section>
+
+                <section class="menu-group">
+                    <h3>Bakery</h3>
+                    <ul>
+                        <li class="menu-item"><div class="menu-row"><span>Spelt Sourdough Loaf</span><span class="dots"></span><span class="price">60</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Spelt Soda Bread, slice</span><span class="dots"></span><span class="price">35</span></div></li>
+                        <li class="menu-item"><div class="menu-row"><span>Croissant</span><span class="dots"></span><span class="price">50</span></div></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div id="where" class="intro">
+            <h2>Where to find us</h2>
+            <p>15 Adr street, 5015<br>Open from 6am to 5pm</p>
+
+            <!-- To change the location, edit the text after "q=" (a place name or "lat,lng") -->
+            <iframe class="map"
+                title="Map showing the cafe location"
+                src="https://www.google.com/maps?q=Point+90+Mall,+New+Cairo&amp;output=embed"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Point+90+Mall+New+Cairo" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+    </body>
+</html>
